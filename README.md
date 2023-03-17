@@ -1,5 +1,9 @@
 # Golang Simple Project Make Rest API Using Gin,Gorm & MySQL
 
+**Gin** is a web framework for the Go programming language that makes it easy for us to create web services such as APIs. We will also be using **Gorm** as its database system.
+
+By using Gin and Gorm together, you can build web applications quickly and easily, as well as make database connections more efficient and effective.
+
 ## Requirement :
 - Gin ( github.com/gin-gonic/gin )
 - Gorm ( gorm.io/gorm )
