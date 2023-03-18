@@ -8,12 +8,12 @@ import (
 var DB *gorm.DB
 
 func ConnectDatabase() {
-	database, err := gorm.Open(mysql.Open("root:@tcp(localhost:3306)/go_restpi_gin"))
+	database, err := gorm.Open(mysql.Open("root:@tcp(localhost:3306)/go_crud"))
 	if err != nil {
 		panic(err)
 	}
 
-	database.AutoMigrate(&Product{})
+	database.AutoMigrate(&Pasien{})
 
 	DB = database
 }

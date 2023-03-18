@@ -11,17 +11,17 @@ import (
 
 func Index(c *gin.Context) {
 
-	var products []models.Product
+	var pasien []models.Pasien
 
-	models.DB.Find(&products)
-	c.JSON(http.StatusOK, gin.H{"products": products})
+	models.DB.Find(&pasien) // Menemukan DB pasien
+	c.JSON(http.StatusOK, gin.H{"pasien": pasien})
 
 }
 func Show(c *gin.Context) {
-	var product models.Product
+	var pasien models.Pasien
 	id := c.Param("id")
 
-	if err := models.DB.First(&product, id).Error; err != nil {
+	if err := models.DB.First(&pasien, id).Error; err != nil {
 		switch err {
 		case gorm.ErrRecordNotFound:
 			c.AbortWithStatusJSON(http.StatusNotFound, gin.H{"message": "Data tidak ditemukan"})
@@ -32,31 +32,31 @@ func Show(c *gin.Context) {
 		}
 	}
 
-	c.JSON(http.StatusOK, gin.H{"product": product})
+	c.JSON(http.StatusOK, gin.H{"pasien": pasien})
 }
 func Create(c *gin.Context) {
 
-	var product models.Product
+	var pasien models.Pasien
 
-	if err := c.ShouldBindJSON(&product); err != nil {
+	if err := c.ShouldBindJSON(&pasien); err != nil {
 		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"message": err.Error()})
 		return
 	}
 
-	models.DB.Create(&product)
-	c.JSON(http.StatusOK, gin.H{"Product": product})
+	models.DB.Create(&pasien)
+	c.JSON(http.StatusOK, gin.H{"pasien": pasien})
 }
 func Update(c *gin.Context) {
-	var product models.Product
+	var pasien models.Pasien
 	id := c.Param("id")
 
-	if err := c.ShouldBindJSON(&product); err != nil {
+	if err := c.ShouldBindJSON(&pasien); err != nil {
 		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"message": err.Error()})
 		return
 	}
 
-	if models.DB.Model(&product).Where("id = ?", id).Updates(&product).RowsAffected == 0 {
-		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"message": "tidak dapat mengupdate product"})
+	if models.DB.Model(&pasien).Where("id = ?", id).Updates(&pasien).RowsAffected == 0 {
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"message": "tidak dapat mengupdate pasien"})
 		return
 	}
 
@@ -65,7 +65,7 @@ func Update(c *gin.Context) {
 }
 func Delete(c *gin.Context) {
 
-	var product models.Product
+	var pasien models.Pasien
 
 	var input struct {
 		Id json.Number
@@ -77,8 +77,8 @@ func Delete(c *gin.Context) {
 	}
 
 	id, _ := input.Id.Int64()
-	if models.DB.Delete(&product, id).RowsAffected == 0 {
-		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"message": "Tidak dapat menghapus product"})
+	if models.DB.Delete(&pasien, id).RowsAffected == 0 {
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"message": "Tidak dapat menghapus pasien"})
 		return
 	}
 
