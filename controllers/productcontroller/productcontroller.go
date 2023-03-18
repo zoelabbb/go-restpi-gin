@@ -13,7 +13,7 @@ func Index(c *gin.Context) {
 
 	var pasien []models.Pasien
 
-	models.DB.Find(&pasien) // Menemukan DB pasien
+	models.DB.Find(&pasien)
 	c.JSON(http.StatusOK, gin.H{"pasien": pasien})
 
 }
