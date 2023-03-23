@@ -10,6 +10,9 @@ By using Gin and Gorm together, you can build web applications quickly and easil
 - MySQL as a Database
 - Postman
 
+# Coming Soon
+I made this a simple project Golang CRUD integrating with Rest API
+
 ## What's the features ?
 - Show API ( localhost:_port_/api/products )
 ![Show Screen Capture](https://raw.githubusercontent.com/zoelabbb/go-restpi-gin/main/Assets/img/Index.PNG)
