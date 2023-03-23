@@ -7,7 +7,7 @@ By using Gin and Gorm together, you can build web applications quickly and easil
 ## Requirement :
 - Gin ( github.com/gin-gonic/gin )
 - Gorm ( gorm.io/gorm )
-- MySQL as a Database
+- MySQL Cloud (PlanetScale) as a Database
 - Postman
 
 # Coming Soon
