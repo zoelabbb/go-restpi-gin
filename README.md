@@ -11,6 +11,7 @@ I'm using [_**Railway**_](https://railway.app?referralCode=CANLESS) to deploy th
 Link to test API : [https://gorestpi.up.railway.app/api/pasien](https://gorestpi.up.railway.app/api/pasien)  
 Sign Up : [Register Railway](https://railway.app?referralCode=CANLESS)  
 GitHub : [Fork Code Here](https://github.com/zoelabbb/go-restpi-gin)
+Documentation : [Here](https://documenter.getpostman.com/view/11527487/2s93RNzExo#project-golang-builds-rest-api-with-gin-gorm-mysql-planetscale)
 
 ## Requirement :
 - Gin ( github.com/gin-gonic/gin )
