@@ -6,6 +6,12 @@ By using Gin and Gorm together, you can build web applications quickly and easil
 
 **PlanetScale** is a cloud-native database platform designed for modern applications. It is a relational database that is built on top of Vitess, an open-source sharding and scaling system for MySQL. I'm also using PlanetScale as my database in this Project.
 
+I'm using [_**Railway**_](https://railway.app?referralCode=CANLESS) to deploy this project Rest API, and I'm using [_**PlanetScale**_](https://planetscale.com/) as a Database MySql.
+
+Link to test API : [https://gorestpi.up.railway.app/api/pasien](https://gorestpi.up.railway.app/api/pasien)  
+Sign Up : [Register Railway](https://railway.app?referralCode=CANLESS)  
+GitHub : [Fork Code Here](https://github.com/zoelabbb/go-restpi-gin)
+
 ## Requirement :
 - Gin ( github.com/gin-gonic/gin )
 - Gorm ( gorm.io/gorm )
