@@ -8,19 +8,16 @@ By using Gin and Gorm together, you can build web applications quickly and easil
 
 I'm using [_**Railway**_](https://railway.app?referralCode=CANLESS) to deploy this project Rest API, and I'm using [_**PlanetScale**_](https://planetscale.com/) as a Database MySql.
 
-Link to test API : [https://gorestpi.up.railway.app/api/pasien](https://gorestpi.up.railway.app/api/pasien)  
-Sign Up : [Register Railway](https://railway.app?referralCode=CANLESS)  
-GitHub : [Fork Code Here](https://github.com/zoelabbb/go-restpi-gin)
-Documentation : [Here](https://documenter.getpostman.com/view/11527487/2s93RNzExo#project-golang-builds-rest-api-with-gin-gorm-mysql-planetscale)
+- Link to test API : [https://gorestpi.up.railway.app/api/pasien](https://gorestpi.up.railway.app/api/pasien)  
+- Sign Up : [Register Railway](https://railway.app?referralCode=CANLESS)  
+- GitHub : [Fork Code Here](https://github.com/zoelabbb/go-restpi-gin)
+- Documentation : [Here](https://documenter.getpostman.com/view/11527487/2s93RNzExo#project-golang-builds-rest-api-with-gin-gorm-mysql-planetscale)
 
 ## Requirement :
 - Gin ( github.com/gin-gonic/gin )
 - Gorm ( gorm.io/gorm )
 - MySQL Cloud (PlanetScale) as a Database
 - Postman
-
-# Coming Soon
-I made this a simple project Golang CRUD integrating with Rest API
 
 ## What's the features ?
 
