@@ -1,21 +1,20 @@
 package models
 
 import (
-	"gorm.io/driver/mysql"
+	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
 
 var DB *gorm.DB
 
 func ConnectDatabase() {
-	// keys := "DSN"
-	// dsn := "29iju1fem3r93rb4k8ci:pscale_pw_IncoiqiF88s9HNwnyNYkfGxIYbT5Rk3SDDSA2yGhea1@tcp(ap-southeast.connect.psdb.cloud)/go_restpi_gin?tls=true"
-	database, err := gorm.Open(mysql.Open("yn6xhx6hndet7wkh36js:pscale_pw_DhYO0DMBR700TMhsfNINbEhUfN2SRdeikETNaOP0ytw@tcp(ap-southeast.connect.psdb.cloud)/go_restpi_gin?tls=true"))
+	dsn := "host=ep-holy-queen-80404705.ap-southeast-1.aws.neon.fl0.io user=fl0user password=5B1omyHNsriR dbname=dbramadhanapis port=5432 sslmode=require"
+	database, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		panic(err)
 	}
 
-	database.AutoMigrate(&Pasien{})
+	database.AutoMigrate(&Pasien{}) // Pastikan Pasien sudah didefinisikan di paket yang sama
 
 	DB = database
 }
